@@ -4,7 +4,6 @@ cond(A,E,I4,I6,T,U,R1,R2,'Accept') :- A='Accept', E='Accept', I4='Accept', I6='A
 cond(A,E,I4,I6,T,U,R1,R2,'Reject') :- (A='Reject'; E='Reject'; I4='Reject'; I6='Reject'; T='Reject'; U='Reject'; R1='Reject'; R2='Reject'), write('Invalid input. \n').
 cond(A,E,I4,I6,T,U,R1,R2,'Drop') :- ((A='Drop'; E='Drop'; I4='Drop'; I6='Drop'; T='Drop'; U='Drop'; R1='Drop';R2='Drop'), \+(A='Reject'; E='Reject'; I4='Reject'; I6='Reject'; T='Reject';U='Reject'; R1='Reject'; R2='Reject')).
 
-
 adapter(Y,'Accept') :- adap('any','Accept'), char_code(Y,Code), (Code>64), (Code<73).
 adapter(Y,Adapval) :- adap(Y,Adapval).
 adapter(Y,Adapval) :- adap_cont(A,B,Adapval), char_code(A,ACode), char_code(B,BCode), char_code(Y,YCode), (YCode>ACode; YCode=ACode), (YCode<BCode; YCode=BCode).
