@@ -1,0 +1,30 @@
+
+
+% FORMAT FOR INPUT
+% check(<adapter>,<ethernet>,<ipv4>,<ipv6>,<tcp>,<udp>,<icmp>,<icmpv6>,Z).
+
+
+
+
+% IF u dont want to type a value for any field  type  _ .
+
+
+
+% Sample Input:
+
+check('A',['eth','vid',100,'proto',200],['ipv4','src','addr',100,'dst','addr',200], _ , ['tcp','dst','port',100,'src','port',200],_, ['icmp','type',100,'code',200],_,Z).
+
+% Output : Z='Reject'.
+
+
+% arguements format
+
+% ['icmp','type',100,'code',200] 
+% ['icmpv6','type',100,'code',200] 
+% 'A'
+% ['tcp','dst','port',100,'src','port',200]
+% ['udp','dst','port',100,'src','port',200]
+% ['eth','vid',100,'proto',200]
+% ['ipv4','src','addr',100,'dst','addr',200]
+% ['ipv4','src','addr',100,'dst','addr',200]
+
